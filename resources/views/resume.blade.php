@@ -17,7 +17,7 @@
                         @endif
                         <!-- Download resume button-->
                         <!-- Note: Set the link href target to a PDF file within your project-->
-                        <a class="btn btn-primary px-4 py-3" href="#!">
+                        <a class="btn btn-primary px-4 py-3" href="{{route('resume.download')}}">
                             <div class="d-inline-block bi bi-download me-2"></div>
                             Download Resume
                         </a>

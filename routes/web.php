@@ -7,7 +7,8 @@ use App\Http\Controllers\ResumeController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', HomeController::class)->name('home');
-Route::get('/resume', ResumeController::class)->name('resume');
+Route::get('/resume', [ResumeController::class, 'index'])->name('resume');
+Route::get('/resume/download', [ResumeController::class, 'download'])->name('resume.download');
 Route::get('/projects', ProjectController::class)->name('projects');
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
