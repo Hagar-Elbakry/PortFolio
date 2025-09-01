@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('location')->nullable();
             $table->string('degree');
             $table->string('field_of_study')->nullable();
-            $table->year('start_year');
+            $table->string('start_year');
             $table->string('end_year');
             $table->text('description')->nullable();
             $table->timestamps();

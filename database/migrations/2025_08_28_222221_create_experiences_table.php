@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('experiences', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('slug');
+            $table->string('name')->unique();
+            $table->string('slug')->unique();
             $table->text('description')->nullable();
-            $table->year('start_year');
+            $table->string('start_year');
             $table->string('end_year');
             $table->string('company');
             $table->string('location')->nullable();

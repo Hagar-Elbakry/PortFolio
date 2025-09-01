@@ -12,7 +12,9 @@
                 <!-- Experience Section-->
                 <section>
                     <div class="d-flex align-items-center justify-content-between mb-4">
+                        @if(count($experiences) > 0)
                         <h2 class="text-primary fw-bolder mb-0">Experience</h2>
+                        @endif
                         <!-- Download resume button-->
                         <!-- Note: Set the link href target to a PDF file within your project-->
                         <a class="btn btn-primary px-4 py-3" href="#!">
@@ -20,7 +22,10 @@
                             Download Resume
                         </a>
                     </div>
-                    <x-experience-card/>
+                    @forelse($experiences as $experience)
+                        <x-experience-card :experience="$experience"/>
+                        @empty
+                    @endforelse
                 </section>
                 <!-- Education Section-->
                 <section>
