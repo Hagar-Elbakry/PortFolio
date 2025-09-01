@@ -70,6 +70,7 @@ class UserForm
                             ->label('Image')
                             ->disk('public')
                            ->directory('images')
+
                     ])->columnSpanFull(),
 
                 Section::make('Social Information')
