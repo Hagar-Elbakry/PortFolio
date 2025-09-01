@@ -28,10 +28,14 @@
                     @endforelse
                 </section>
                 <!-- Education Section-->
-                <section>
-                    <h2 class="text-secondary fw-bolder mb-4">Education</h2>
-                   <x-education-card/>
-                </section>
+                @if(count($educations) > 0)
+                    <section>
+                        <h2 class="text-secondary fw-bolder mb-4">Education</h2>
+                        @foreach($educations as $education)
+                            <x-education-card :education="$education"/>
+                        @endforeach
+                    </section>
+                @endif
                 <!-- Divider-->
                 <div class="pb-5"></div>
                 <!-- Skills Section-->
