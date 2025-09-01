@@ -62,11 +62,14 @@
                             <div class="mb-0">
                                 <div class="d-flex align-items-center mb-4">
                                     <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3"><i class="bi bi-code-slash"></i></div>
+                                    @if(count($languages) > 0)
                                     <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">Languages</span></h3>
+                                    @endif
                                 </div>
                                 <div class="row row-cols-1 row-cols-md-3 mb-4">
-{{--                                    loop--}}
-                                    <div class="col mb-4"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100"></div></div>
+                                @foreach($languages as $language)
+                                        <div class="col mb-4"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">{{$language->name}}</div></div>
+                                @endforeach
                                 </div>
                             </div>
                         </div>
