@@ -21,7 +21,7 @@ class LanguageForm
                         Group::make()
                             ->schema([
                                 TextInput::make('name')
-                                    ->unique()
+                                    ->unique(ignoreRecord: true)
                                     ->maxLength(255)
                                     ->required()
                                     ->live(onBlur: true)

@@ -23,7 +23,7 @@ class ExperienceForm
                     ->schema([
                         TextInput::make('name')
                         ->required()
-                        ->unique()
+                        ->unique(ignoreRecord: true)
                         ->maxLength(255)
                         ->live(onBlur: true)
                         ->afterStateUpdated(function (Set $set, $state) {

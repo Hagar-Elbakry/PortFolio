@@ -10,7 +10,7 @@ class ResumeObserver
 {
     public function saved(Resume $resume): void
     {
-        if ($resume->isDirty('resume')) {
+        if ($resume->isDirty('resume') && !is_null($resume->getOriginal('resume'))) {
             Storage::disk('public')->delete($resume->getOriginal('resume'));
         }
     }

@@ -2,10 +2,9 @@
     <div class="card-body p-0">
         <div class="d-flex align-items-center">
             <div class="p-5">
-                <h2 class="fw-bolder">Project Name 1</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius at enim eum illum aperiam placeat esse? Mollitia omnis minima saepe recusandae libero, iste ad asperiores! Explicabo commodi quo itaque! Ipsam!</p>
+                <a href="{{$project->link}}" class="text-black"><h2 class="fw-bolder">{{$project->name}}</h2></a>
+                <p>{{$project->description}}</p>
             </div>
-            <img class="img-fluid" src="https://dummyimage.com/300x400/343a40/6c757d" alt="..." />
         </div>
     </div>
 </div>

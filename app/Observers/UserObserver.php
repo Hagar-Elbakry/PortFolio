@@ -9,7 +9,7 @@ class UserObserver
 {
     public function saved(User $user): void
     {
-        if ($user->isDirty('image')) {
+        if ($user->isDirty('image') && !is_null($user->getOriginal('image'))) {
             Storage::disk('public')->delete($user->getOriginal('image'));
         }
     }

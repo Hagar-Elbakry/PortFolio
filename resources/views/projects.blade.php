@@ -10,8 +10,11 @@
             </div>
             <div class="row gx-5 justify-content-center">
                 <div class="col-lg-11 col-xl-9 col-xxl-8">
-                    <x-project-card/>
+                    @foreach($projects as $project)
+                        <x-project-card :project="$project"/>
+                    @endforeach
                 </div>
+                {{$projects->links()}}
             </div>
         </div>
     </section>
@@ -20,7 +23,7 @@
         <div class="container px-5 my-5">
             <div class="text-center">
                 <h2 class="display-4 fw-bolder mb-4">Let's build something together</h2>
-                <a class="btn btn-outline-light btn-lg px-5 py-3 fs-6 fw-bolder" href="contact.html">Contact me</a>
+                <a class="btn btn-outline-light btn-lg px-5 py-3 fs-6 fw-bolder" href="{{route('contact')}}">Contact me</a>
             </div>
         </div>
     </section>
