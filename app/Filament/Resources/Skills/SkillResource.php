@@ -18,7 +18,9 @@ class SkillResource extends Resource
 {
     protected static ?string $model = Skill::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::Sparkles;
+
+    protected static ?int $navigationSort = 7;
 
     public static function form(Schema $schema): Schema
     {

@@ -18,8 +18,9 @@ class ResumeResource extends Resource
 {
     protected static ?string $model = Resume::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::DocumentText;
 
+    protected static ?int $navigationSort = 6;
     public static function form(Schema $schema): Schema
     {
         return ResumeForm::configure($schema);
