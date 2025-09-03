@@ -44,8 +44,19 @@ A Laravel-based portfolio platform with a customizable dashboard and template. E
 6. **Access the admin panel:**
    - Visit `/admin` in your browser and log in with your admin credentials.
    - Add your own data (profile, resume, projects, etc.) via the dashboard.
+  
+7. **Change the username in `HomeController`:**
+   - When fetching the user from the database in `HomeController`, update the username to match the user you want to display on the public portfolio.
+   - Example:
+     ````php
+     // filepath: app/Http/Controllers/HomeController.php
+     // ...existing code...
+     $user = User::where('username', 'your-username')->first();
+     // ...existing code...
+     ````
+   - Replace `'your-username'` with your actual username.
 
-7. **View your public portfolio:**
+8. **View your public portfolio:**
    - Visit `/` to see your portfolio rendered with the data you entered.
 
 ## Dashboard Demo
