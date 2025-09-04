@@ -30,9 +30,10 @@ A Laravel-based portfolio platform with a customizable dashboard and template. E
      php artisan key:generate
      ```
 
-4. **Run migrations:**
+4. **Run migrations and create storage link:**
    ```sh
    php artisan migrate
+   php artisan storage:link
    ```
 
 5. **Create an admin user for Filament dashboard:**
@@ -45,19 +46,9 @@ A Laravel-based portfolio platform with a customizable dashboard and template. E
    - Visit `/admin` in your browser and log in with your admin credentials.
    - Add your own data (profile, resume, projects, etc.) via the dashboard.
   
-7. **Change the username in `HomeController`:**
-   - When fetching the user from the database in `HomeController`, update the username to match the user you want to display on the public portfolio.
-   - Example:
-     ````php
-     // filepath: app/Http/Controllers/HomeController.php
-     // ...existing code...
-     $user = User::where('username', 'your-username')->first();
-     // ...existing code...
-     ````
-   - Replace `'your-username'` with your actual username.
 
-8. **View your public portfolio:**
-   - Visit `/` to see your portfolio rendered with the data you entered.
+7. **View your public portfolio:**
+   -  After creating your user in the dashboard and entering your data, you can visit your public website using the link displayed in the users table inside the dashboard. Click the link to view your portfolio.
 
 ## Dashboard Demo
 
