@@ -6,6 +6,7 @@ use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Toggle;
 use Filament\Resources\Pages\CreateRecord;
 use Filament\Resources\Pages\Page;
 use Filament\Schemas\Components\Group;
@@ -60,7 +61,9 @@ class UserForm
                                     ->timezone('Africa/Cairo')
                                     ->afterOrEqual('created_at')
                                     ->hiddenOn('create')
-                            ])->columns(2)
+                            ])->columns(2),
+                        Toggle::make('is_portfolio_owner')
+                        ->label('Portfolio owner')
                     ])->columnSpanFull(),
 
                 Section::make('Additional Information')

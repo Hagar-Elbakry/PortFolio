@@ -23,7 +23,7 @@ class UsersTable
                 ImageColumn::make('image')
                     ->label('Image')
                     ->disk('public')
-                    ->defaultImageUrl(url('storage/images/default.jpg')),
+                    ->default(asset('assets/default.jpg')),
               TextColumn::make('bio')
                   ->label('Bio')
                   ->default('-')

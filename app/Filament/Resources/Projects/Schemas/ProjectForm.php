@@ -35,7 +35,8 @@ class ProjectForm
                     ->dehydrated()
                     ->required()
                 ])->columns(2),
-                TextInput::make('link'),
+                TextInput::make('link')
+                    ->required(),
                 Textarea::make('description')
                 ])->columnSpanFull()
             ]);
