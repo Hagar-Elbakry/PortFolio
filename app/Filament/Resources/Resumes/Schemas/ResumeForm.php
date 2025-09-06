@@ -19,6 +19,10 @@ class ResumeForm
                     FileUpload::make('resume')
                     ->disk('public')
                     ->directory('resume')
+                     ->acceptedFileTypes([
+                         'application/pdf',
+                         'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+                     ])
                     ->required(),
                     Group::make()
                         ->schema([

@@ -22,6 +22,7 @@ class ResumeController extends Controller
 
     public function download() {
         $resumes = Resume::all();
-         return Storage::download($resumes[0]->resume, 'resume.pdf');
+        $fileName = 'resume.' . pathinfo($resumes[0]->resume, PATHINFO_EXTENSION);
+         return Storage::download($resumes[0]->resume, $fileName);
     }
 }
