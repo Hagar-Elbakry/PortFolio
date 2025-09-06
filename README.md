@@ -45,11 +45,13 @@ A Laravel-based portfolio platform with a customizable dashboard and template. E
 6. **Access the admin panel:**
    - Visit `/admin` in your browser and log in with your admin credentials.
    - Add your own data (profile, resume, projects, etc.) via the dashboard.
-  
+
+7. **Set Portfolio Owner:**
+   - In the user form in Filament, make sure to set the **Portfolio Owner** toggle to `true`.
 
 7. **View your public portfolio:**
-   -  After creating your user in the dashboard and entering your data, you can visit your public website using the link displayed in the users table inside the dashboard. Click the link to view your portfolio.
-
+   -  Visit `/` to see your portfolio rendered with the data you entered.
+  
 ## Dashboard Demo
 
 See how to log in and manage your data in the admin panel:
